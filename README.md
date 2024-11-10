@@ -25,10 +25,7 @@
   </a>
 </p>
 
-Consumet scrapes data from various websites and provides APIs for accessing the data to satisfy your needs.
-
-> [!IMPORTANT]
-> Self-hosting the Consumet is required to use the API. Consumet API is no longer publicly available. Please refer to the [Installation section](#installation) for more information on hosting your own instance.
+Consumet with FlixHQ Fix. Powered by the WHVX Megacloud API! In order to extract the links from FlixHQ, you must purchase an API Token from WHVX. You can do that by joining the [Vid Binge Discord server](https://discord.gg/NUkptaB7) and opening up a ticket. Or contact dev@whvx.net
 
 > [!CAUTION]
 > Consumet is not affiliated with any of the providers it scrapes data from. Consumet is not responsible for any misuse of the data provided by the API. Commercial utilization may lead to serious consequences, including potential site takedown measures. Ensure that you understand the legal implications before using this API.
@@ -37,11 +34,11 @@ Consumet scrapes data from various websites and provides APIs for accessing the 
 
 - [Installation](#installation)
   - [Locally](#locally)
-  - [Docker](#docker)
   - [Heroku](#heroku)
   - [Vercel](#vercel)
   - [Render](#render)
   - [Railway](#railway)
+- [Enabling FlixHQ](#flixhq)
 - [Documentation](#documentation)
 - [Development](#development)
 - [Showcases](#showcases)
@@ -68,44 +65,29 @@ start the server!
 $ npm start #or yarn start
 ```
 
-### Docker
-Docker image is available at [Docker Hub](https://hub.docker.com/r/riimuru/consumet-api).
-
-run the following command to pull and run the docker image.
-
-```sh
-$ docker pull riimuru/consumet-api
-$ docker run -p 3000:3000 riimuru/consumet-api
-```
-This will start the server on port 3000. You can access the server at http://localhost:3000/, And can change the port by changing the -p option to `-p <port>:3000`.
-
-Be sure to set `NODE_ENV` to `PROD` in your environment variables when running your own instance.
-Check out the `.env.example` file for more information.
-
-You can add `-d` flag to run the server in detached mode.
-
 ### Heroku
 Host your own instance of Consumet API on Heroku using the button below.
 
-[![Deploy on Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/consumet/api.consumet.org/tree/main)
+[![Deploy on Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/joshholly/api.consumet.org/tree/main)
 
 ### Vercel
 Host your own instance of Consumet API on Vercel using the button below.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fconsumet%2Fapi.consumet.org)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/joshholly/api.consumet.org&env=MEGACLOUD_TOKEN)
 
 ### Render
 Host your own instance of Consumet API on Render using the button below.
 
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/consumet/api.consumet.org)
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/joshholly/api.consumet.org)
 
-### Railway
-Host your own instance of Consumet API on Railway using the button below.
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/C0FwuP?referralCode=dv4TuD)
+## FlixHQ
+
+To extract links from FlixHQ using this fork, you must have a WHVX Megacloud API token. Set your token in your environment variables under MEGACLOUD_TOKEN. To purchase a megacloud API token, join the [Vid Binge Discord server](https://discord.gg/NUkptaB7) and open up a ticket. Or contact dev@whvx.net. 
+
 
 ## Documentation
-Please refer to the [documentation](https://docs.consumet.org). Join our [Discord server](https://discord.gg/qTPfvMxzNH) if you need any additional help or have any questions, comments, or suggestions.
+Please refer to the [documentation](https://docs.consumet.org). Join the Consumet [Discord server](https://discord.gg/qTPfvMxzNH) if you need any additional help or have any questions, comments, or suggestions.
 
 ## Development
 Pull requests and stars are always welcome, for bugs and features create a new [issue](https://github.com/consumet/api.consumet.org/issues). If you're brave to make make a commit to the project see [CONTRIBUTING.md](https://github.com/consumet/consumet.ts/blob/master/docs/guides/contributing.md).

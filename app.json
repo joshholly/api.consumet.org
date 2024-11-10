@@ -21,6 +21,10 @@
         "REDIS_PORT": {
             "description": "Set redis port, you can create a redis instance on your own or use upstash (https://upstash.com) its for free.",
             "value": ""
+        },
+        "MEGACLOUD_TOKEN": {
+            "description": "Needed to extract links from FlixHQ. To get your WHVX Megacloud API Token, contact us on Discord: https://discord.gg/NUkptaB7 or go to https://whvx.net",
+            "value": ""
         }
     }
 }
